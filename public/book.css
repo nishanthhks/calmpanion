@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --input-border: #6f3fdf;
+  --input-border-dark: #35108b;
+  --input-border-dark: #2262da;
+  --background: #fcf6ec;
+  --backround-darker: #ff7817;
+}
+
+/*personal*/
+.schedule {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.886);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border: 3px solid black;
+  box-shadow: 5px 4px black;
+  background-color: rgb(255, 255, 255);
+}
+
+.inner-cointainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.heading {
+  position: absolute;
+  top: 10px;
+  font-size: 20pt;
+  color: var(--backround-darker);
+}
+.general h2 {
+  color: var(--input-border);
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+}
+input[type="text"],
+input[type="email"] {
+  border-radius: 5px;
+  border: 2px solid var(--backround-darker);
+  width: 100%;
+  height: 40px;
+  padding-left: 5px;
+}
+.input-div {
+  padding: 5px;
+  width: 100%;
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.fullname-input {
+  margin-top: 25px;
+}
+.visited {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.check {
+  display: flex;
+  padding: 10px;
+}
+.check-input {
+  display: flex;
+  padding-right: 15px;
+}
+
+.check-input label {
+  position: relative;
+  top: -0.3px;
+  left: 4px;
+}
+.checkBox-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--backround-darker);
+}
+/*general*/
+.description p {
+  font-size: 12pt;
+}
+.description {
+  margin-top: 30px;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+}
+.date-time {
+  display: flex;
+  justify-content: space-between;
+}
+.date-input,
+.time-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.time,
+.date,
+.doctor,
+.reason {
+  width: 100%;
+  height: 40px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--input-border);
+}
+.confirm {
+  border: none;
+  text-decoration: none;
+  color: white;
+  width: 100px;
+  padding: 7.5px 15px;
+  background-color: var(--input-border-dark);
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: all 0.2s ease 0s;
+}
+
+.confirm:hover {
+  box-shadow: 4px 3px black;
+}

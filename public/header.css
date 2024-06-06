@@ -1,0 +1,202 @@
+/*root styles*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  :root {
+    --seasalt: #f8f9faff;
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray: #ced4daff;
+    --french-gray-2: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --outer-space: #495057ff;
+    --onyx: #343a40ff;
+    --eerie-black: #212529ff;
+  
+    --asparagus: #6a994eff;
+    --dark-moss-green: #606c38ff;
+    --dark-green: #283618ff;
+    --cornsilk: rgb(241, 239, 231);
+    --earth-yellow: #dda15eff;
+    --tigers-eye: #bc6c25ff;
+    --secondary: #ff7817;
+    --secondary-2: #ff08b5;
+    --bittersweet-shimmer: #bc4749ff;
+    --sec-dark-blue: #1b263b;
+  
+    --light-1: #fff7ee;
+    --light-2: #f6e7d4;
+    --light-3: #fde4c6;
+  }
+  /*header and navbar*/
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+    box-shadow: 1px 5px 14px -1px #f6d2b9;
+    padding: 35px 20px;
+    background-color: rgba(255, 255, 255, 0.722);
+    backdrop-filter: blur(100px);
+    height: 50px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo h2 {
+    position: absolute;
+    left: 85px;
+    top: 22px;
+  }
+  .logo h2::after {
+    content: "";
+    position: absolute;
+    left: -7px;
+    background-color: #2262da;
+    height: 45px;
+    width: 4px;
+  }
+  .logo h2::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    bottom: 0px;
+    background-color: #2262da;
+    height: 4px;
+    width: 40px;
+  }
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    padding: 15px;
+  }
+  .navbar ul li {
+    text-align: center;
+  }
+  .navbar ul .about-us a,
+  .donate a {
+    color: black;
+    font-weight: 600;
+  }
+  .navbar ul .about-us:hover,
+  .donate:hover {
+    border-bottom: 4px solid black;
+    margin-bottom: -4px;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .login a {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    background-color: white;
+    font-weight: 900;
+    padding: 10px 20px;
+    transition: all 0.2s ease 0s;
+  }
+  .login a:hover {
+    box-shadow: 4px 3px black;
+    border: 2px solid black;
+  }
+  .register a {
+    color: var(--cornsilk);
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    font-weight: 900;
+    padding: 10px 22px;
+    /* border-radius: 50px; */
+    transition: all 0.2s ease-in 0s;
+  }
+  .register a:hover {
+    box-shadow: 4px 3px black;
+    border: 2px solid black;
+  }
+  .navbar .menu {
+    cursor: pointer;
+  }
+  
+  .cross {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  /* header sidebar*/
+  .sidebar {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 78px;
+    right: 5px;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;
+    padding: 4px;
+    background-color: white;
+    outline: 4px solid var(--secondary);
+  }
+  
+  .sidebar ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .sidebar ul li {
+    width: 100%;
+    height: 100%;
+    margin: 2px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar ul li a {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--secondary);
+    font-weight: 500;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s ease 0s;
+  }
+  .sidebar ul li a:hover {
+    background-color: rgb(255, 64, 0);
+  }
+  
+  /*responsive*/
+  @media (max-width: 576px) {
+    .about-us,
+    .donate,
+    .login,
+    .register {
+      display: none;
+    }
+    /* .hamburger {
+      display: block;
+    }
+    .cross {
+      display: none;
+    } */
+  }

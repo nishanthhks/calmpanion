@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire Card</title>
+    <link rel="stylesheet" href="questions.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <div id="card">
+      <div class="card-header">
+        <h2>Questionnaire</h2>
+      </div>
+      <div class="card-body">
+        <div class="questionCounterContainer">
+          <div id="questionCounter"></div>
+        </div>
+        <div class="question" id="questionTitle"></div>
+        <div class="options" id="options"></div>
+        <div class="buttons">
+          <button class="btn btn-primary" onclick="Prev()">Previous</button>
+          <button class="btn btn-primary" onclick="Next()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentQuestionIndex = 1;
+      const qna = {
+        q1: {
+          question:
+            "What does self-awareness involve in the context of mental health?",
+          op1: "Ignoring personal emotions",
+          op2: "Recognizing and understanding one's thoughts and feelings",
+          op3: "Suppressing any negative emotions",
+          op4: "Avoiding introspection",
+          ans: "op2",
+        },
+        q2: {
+          question:
+            "How would you describe your overall mood and emotional state lately?",
+          op1: "Consistently positive",
+          op2: "Mostly neutral",
+          op3: "Frequently anxious or stressed",
+          op4: "Frequently sad or depressed",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q3: {
+          question:
+            "How well are you able to handle stress and challenges in your life?",
+          op1: "Very well",
+          op2: "Moderately well",
+          op3: "Struggling somewhat",
+          op4: "Not coping effectively",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q4: {
+          question: "How would you rate your quality of sleep?",
+          op1: "Excellent",
+          op2: "Good",
+          op3: "Fair",
+          op4: "Poor",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q5: {
+          question:
+            "Do you find joy and satisfaction in activities that you used to enjoy?",
+          op1: "Yes, consistently",
+          op2: "Occasionally",
+          op3: "Rarely",
+          op4: "Not at all",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q6: {
+          question:
+            "How would you describe your level of energy throughout the day?",
+          op1: "High and consistent",
+          op2: "Moderate",
+          op3: "Fluctuating",
+          op4: "Low and consistently tired",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q7: {
+          question:
+            "How often do you feel overwhelmed by daily responsibilities and tasks?",
+          op1: "Rarely or never",
+          op2: "Occasionally",
+          op3: "Frequently",
+          op4: "Almost always",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q8: {
+          question:
+            "Are you able to concentrate and focus on tasks without significant difficulty?",
+          op1: "Yes, consistently",
+          op2: "Most of the time",
+          op3: "Sometimes",
+          op4: "Rarely or never",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+        q9: {
+          question:
+            "How satisfied are you with your personal and professional relationships?",
+          op1: "Very satisfied",
+          op2: "Moderately satisfied",
+          op3: "Somewhat dissatisfied",
+          op4: "Very dissatisfied",
+          ans: "Choose the most appropriate option based on the individual's response.",
+        },
+      };
+
+      const totalQuestions = Object.keys(qna).length;
+
+  function showQuestion() {
+    const currentQuestion = qna[`q${currentQuestionIndex}`];
+
+    document.getElementById(
+      "questionCounter"
+    ).textContent = `${currentQuestionIndex}/${totalQuestions}`;
+
+    document.getElementById("questionTitle").textContent =
+      currentQuestion.question;
+
+    const optionsContainer = document.getElementById("options");
+    optionsContainer.innerHTML = "";
+
+    for (let i = 1; i <= 4; i++) {
+      const optionKey = `op${i}`;
+      const optionValue = currentQuestion[optionKey];
+
+      const optionButton = document.createElement("button");
+      optionButton.textContent = optionValue;
+
+      // Use a data attribute to store the button state
+      optionButton.setAttribute("data-state", "blue");
+
+      optionButton.onclick = function () {
+        const currentState = optionButton.getAttribute("data-state");
+
+        if (currentState === "blue") {
+          optionButton.style.backgroundColor = "#007bff"; // Blue color
+          optionButton.setAttribute("data-state", "green");
+        } else {
+          optionButton.style.backgroundColor = "green";
+          optionButton.setAttribute("data-state", "blue");
+        }
+
+        console.log(`Selected option: ${optionKey}`);
+      };
+
+      optionsContainer.appendChild(optionButton);
+    }
+  }
+
+  function Next() {
+    if (currentQuestionIndex < totalQuestions) {
+      currentQuestionIndex++;
+      showQuestion();
+    }
+  }
+
+  function Prev() {
+    if (currentQuestionIndex > 1) {
+      currentQuestionIndex--;
+      showQuestion();
+    }
+  }
+
+  showQuestion();
+    </script>
+  </body>
+</html>

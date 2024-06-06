@@ -1,0 +1,138 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="book.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+  </head>
+  <body>
+    <!-- <img src="images/back-pattern.svg" class="pattern" /> -->
+   
+    <section class="schedule">
+      <!--personal information-->
+      <form class="container" id="schedule" method="POST" action="/">
+        <div class="inner-cointainer personal" >
+          <h2 class="personal-information heading">Personal</h2>
+          <div class="fullname-input input-div">
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" id="fullname" />
+          </div>
+          <div class="contact">
+            <div class="email-input input-div">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="phonenumber-input input-div">
+              <label for="phonenumber">Phone</label>
+              <input type="text" name="phonenumber" id="phonenumber" />
+            </div>
+          </div>
+          <label class="visited" for="">Visited previously?</label>
+          <div class="check">
+            <div class="check-input">
+              <input type="radio" name="yes" id="yes" />
+              <label for="yes">yes</label>
+            </div>
+            <div class="check-input">
+              <input type="radio" name="no" id="no" />
+              <label for="no">no</label>
+            </div>
+            <div class="check-input">
+              <input type="radio" name="notsure" id="notsure" />
+              <label for="notsure">not sure</label>
+            </div>
+          </div>
+          <div class="comment-input input-div">
+            <label for="textarea">Comments</label>
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="30"
+              rows="4"></textarea>
+          </div>
+          <div class="checkBox-input input-div">
+            <input type="checkbox" name="agree" id="agree" />
+            <label for="agree">Agree with us</label>
+          </div>
+        </div>
+        <!--general information-->
+        <div class="inner-cointainer general">
+          <h2 class="general-information heading">General</h2>
+          <div class="description">
+            <h3>CALMPANION</h3>
+            <p>
+              Discover peace, support, and resources for your mental health journey with CALMPANION. Empowering you to find calmness amidst life's challenges.
+            </p>
+          </div>
+          <div class="date-time">
+            <div class="date-input input-div">
+              <label for="date">Date</label>
+              <input class="date" type="date" name="date" id="date" />
+            </div>
+            <div class="time-input input-div">
+              <label for="time">Time</label>
+              <input class="time" type="time" name="time" id="time" />
+            </div>
+          </div>
+
+          <div class="reason-selection input-div">
+            <label for="reason">Reason for visit</label>
+            <select class="reason" id="reason" name="reason" required>
+              <option value="">Select Reason</option>
+              <option value="A">ADHD</option>
+              <option value="B">Dyslexia</option>
+            </select>
+          </div>
+
+          <div class="doctor-selection input-div">
+            <label for="doctor">Doctor's Name</label>
+            <select class="doctor" id="doctor" name="doctor" required>
+              <option value="">Select Doctor</option>
+              <option value="Dr. Smith - Cardiology">
+                Dr. Smith - Cardiology
+              </option>
+              <option value="Dr. Johnson - Pediatrics">
+                Dr. Johnson - Pediatrics
+              </option>
+            </select>
+          </div>
+          <!-- <input type="submit"  class="confirm" id="sub"></i> -->
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <script src="schedule.js"></script>
+    <script>
+      const sidebar = document.querySelector(".sidebar").style;
+      const hamburger = document.querySelector(".hamburger").style;
+      const cross = document.querySelector(".cross").style;
+      const menu = document.querySelector(".menu");
+      if (window.innerWidth < 576) {
+        hamburger.display = "block";
+      } else {
+        sidebar.display = "none";
+        hamburger.display = "none";
+        cross.display = "none";
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 576) {
+          hamburger.display = "block";
+        } else {
+          sidebar.display = "none";
+          hamburger.display = "none";
+          cross.display = "none";
+        }
+      });
+      function toggleSidebar() {
+        cross.display = hamburger.display === "none" ? "block" : "none";
+        sidebar.display = cross.display === "none" ? "flex" : "none";
+        hamburger.display = sidebar.display === "none" ? "block" : "none";
+        cross.display = hamburger.display === "none" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>

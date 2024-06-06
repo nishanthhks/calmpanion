@@ -1,0 +1,27 @@
+<%- include("partials/headfoot.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="headfoot.css">
+    <link rel="stylesheet" href="your.css">
+</head>
+<body>
+    <section class="blog-list">
+        <% posts.forEach((post, index) => { %>
+            <article>
+                <h2><%= post.topic %></h2>
+                <p style="font-weight: bolder;"  class="author">By <%= post.Author %></p>
+                <p class="content"><%= post.content %></p>
+                <% if (index >= 1) { %>
+                    <form class="delete-form" action="/delete/<%= post.id %>" method="post">
+                        <button class="delete-btn" type="submit">Delete Post</button>
+                    </form>
+                <% } %>
+            </article>
+        <% }); %>
+    </section>    
+</body>
+</html>

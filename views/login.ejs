@@ -1,0 +1,63 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="login-registration.css" />
+  </head>
+  <body>
+   <section class="log-reg">
+      <div class="container">
+        <div class="form-container">
+          <span class="title">Login </span>
+          <form id="loginForm" action="/login" method="POST">
+            <div class="input-field email">
+              <img
+                class="envelope icon"
+                src="icons/envelope.svg"
+                alt=""
+                width="20" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email" />
+            </div>
+            <div class="input-field password">
+              <img
+                class="lock icon"
+                src="icons/lock.svg"
+                alt=""
+                width="20" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password" />
+              <img
+                class="crossed-eye"
+                src="icons/crossed-eye.svg"
+                alt=""
+                width="20" />
+            </div>
+            <div class="checkBox-item">
+              <div class="checkBox-content">
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">Remember me</label>
+              </div>
+              <a href="/">Forget password?</a>
+            </div>
+            <button class="button" type="submit">Login now</button>
+            <div class="register-login-redirect">
+              <p>Not a member? <a href="/registration">Signup now</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+   </section class="log-reg">
+  </body>
+</html>
+<%- include("partials/footer.ejs") %>

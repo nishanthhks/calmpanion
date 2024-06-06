@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  :root {
+    --secondary: #ff7817;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #1b263b;
+    color: white;
+  }
+  /*1*/
+  .footer-registration {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    color: white;
+  }
+  .footer-heading {
+    width: 100%;
+  }
+  .footer-heading p {
+    text-transform: uppercase;
+  }
+  .footer-heading h3 {
+    text-transform: uppercase;
+  }
+  .footer-registration a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--secondary);
+  }
+  /*2*/
+  .footer-image {
+    grid-column: 3/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  /*3*/
+  .footer-logo {
+    grid-column: 5/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .links a {
+    color: rgba(255, 255, 255, 0.559);
+    text-align: center;
+  }
+  .links a:hover {
+    text-decoration-color: var(--secondary);
+  }
+  /*4,5,6*/
+  .footer-info-1 {
+    grid-column: 1/3;
+    padding: 40px;
+  }
+  .footer-info-2 {
+    grid-column: 3/5;
+    padding: 40px;
+  }
+  .footer-info-3 {
+    grid-column: 5/7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+  }
+  /*credits*/
+  .credits-container {
+    padding: 20px;
+    outline: 5px solid var(--secondary);
+    color: #222222;
+    background-color: #fff;
+    position: relative;
+  }
+  .credits-container img {
+    float: left;
+    margin-bottom: 10px;
+  }
+  .credits-container .icon-links {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .credits-container .icon-links img {
+    transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  }
+  .credits-container .icon-links img:hover {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+  .credits-container p {
+    clear: both;
+  }
+  
+  /*responsiveness*/
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .footer-registration {
+      grid-column: 1/4;
+    }
+    .footer-image {
+      grid-column: 4/7;
+    }
+    .footer-logo {
+      grid-column: 1/3;
+    }
+    .footer-info-1 {
+      grid-column: 3/5;
+    }
+    .footer-info-2 {
+      grid-column: 5/7;
+    }
+    .footer-info-3 {
+      grid-column: 1/7;
+    }
+  }
+  @media (max-width: 576px) {
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, 1fr);
+    }
+    .footer-registration,
+    .footer-image,
+    .footer-logo,
+    .footer-info-3 {
+      grid-column: 1/3;
+    }
+  
+    .footer-info-1 {
+      grid-column: 1/2;
+      padding: 20px;
+    }
+    .footer-info-2 {
+      grid-column: 2/3;
+      padding: 20px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-registration">
+            <div class="footer-heading">
+              <p>Mental Wellness.</p>
+              <h3>Welcome to <span class="calmpanion">CALMPANION</span></h3>
+            </div>
+            <a href="/registration">Sign up.... !</a>
+          </div>
+          <div class="footer-image">
+            <img src="images/footer-img.svg" alt="" width="300" />
+          </div>
+          <div class="footer-logo">
+            <div class="logo">
+              <img src="icons/Project 14_1.svg" alt="" height="200" />
+              <!-- <h2>CALMPANION</h2> -->
+            </div>
+            <p>
+              Discover peace, support, and resources for your mental health
+              journey
+            </p>
+          </div>
+          <div class="footer-info-1 links">
+            <a href="#">About</a>
+            <a href="#">Jobs</a>
+            <a href="#">Docs</a>
+          </div>
+          <div class="footer-info-2 links">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">cookie policy</a>
+          </div>
+          <div class="footer-info-3">
+            <p>
+              "Discover peace, support, and resources for your mental health
+              journey with CALMPANION. Empowering you to find calmness amidst
+              life's challenges."
+            </p>
+          </div>
+        </div>
+        <div class="credits-container">
+          <div class="icon-links">
+            <img
+              class="first"
+              src="logos/github.png"
+              alt=""
+              width="30px"
+              height="" />
+            <img
+              src="logos/twitter.png"
+              alt=""
+              width="30px"
+              height="" />
+            <img
+              src="logos/facebook-app-symbol.png"
+              alt=""
+              width="30px"
+              height="" />
+            <img src="logos/reddit.png" alt="" width="30px" height="" />
+            <img
+              src="logos/instagram.png"
+              alt=""
+              width="30px"
+              height="" />
+          </div>
+          <p style="justify-content: center;align-items: center;text-align: center;">&#169;2024 CALMPANION. All rights reserved</p>
+        </div>
+      </footer>
+    
+</body>
+</html>

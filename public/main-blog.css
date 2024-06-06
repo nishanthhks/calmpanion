@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.blog {
+  padding-top: 10px;
+  margin: 20px;
+  padding: 20px 60px;
+}
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.main-blog {
+  width: 100%;
+  height: 800px;
+  border: 3px solid black;
+  box-shadow: 5px 4px black;
+  background-color: rgb(255, 255, 255);
+  overflow: auto;
+}
+.card-align {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  margin: 30px;
+  height: 250px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  outline: 5px solid rgb(255, 255, 255);
+  box-shadow: 0px 15px black;
+}
+.card-1 {
+  background-image: url(./images/cards/card-1.svg);
+  background-repeat: no-repeat;
+  background-size: calc(100%);
+}
+.card-2 {
+  background-image: url(./images/cards/card-2.svg);
+  background-repeat: no-repeat;
+  background-size: calc(100%);
+}
+.card-3 {
+  background-image: url(./images/cards/card-3.svg);
+  background-repeat: no-repeat;
+  background-size: calc(100%);
+}
+.card-4 {
+  background-image: url(./images/cards/project.svg);
+  background-repeat: no-repeat;
+  background-size: calc(100%);
+}
+
+.card .link {
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.329);
+  backdrop-filter: blur(5px);
+  height: 40%;
+  position: relative;
+}
+
+.card span {
+  background-color: rgb(255, 255, 255);
+  width: 20%;
+  text-align: center;
+  border-radius: 5px;
+}
+.card .link h3 {
+  padding: 10px;
+  font-weight: 900;
+  color: #000000c3;
+}
+.card .link a {
+  position: absolute;
+  background-color: #ffffffbc;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+}

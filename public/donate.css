@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+  .background-img{
+    height:650px;
+    background-image:url('./images/DONATE.jpg');
+    background-size: cover;
+    position:relative;
+
+  }
+  
+  .donate-desc{
+    position:absolute;
+    top:200px;
+    left:60px;
+  }
+  .donate-heading{
+    font-size:80px;
+    font-weight:800;
+  }
+  .donate-sub-heading{
+    font-size:20px;
+    font-weight:700;
+  }
+  .donate-button{
+    height:40px;
+    width:100px;
+    border-radius: 20px;
+    background-color: black;
+    color:white;
+    margin-top:15px;
+  }
+  .donate-cause-title{
+    font-size:50px;
+    font-weight: bolder;
+    text-align:center;
+  }
+  .donate-cause-container{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+   
+  }
+  .donate-cause-card-one{
+    margin:10px;
+    height:200px;
+    max-width:400px;
+    width:100%;
+    border:1px solid black;
+    box-shadow: 10px 10px black;
+  }
+  .donate-cause-card-two{
+    margin:10px;
+    height:200px;
+    max-width:400px;
+    width:100%;
+    border:1px solid black;
+    box-shadow: 10px 10px black;
+  }
+  .donate-cause-card-three{
+    margin:10px;
+    height:200px;
+    max-width:400px;
+    width:100%;
+    border:1px solid black;
+    box-shadow: 10px 10px black;
+  }
+  .donate-cause-card-title{
+    font-size:20px;
+    font-weight: bolder;
+    text-align:center;
+  }
+  .donate-cause-card-desc{
+    font-size:18px;
+    text-align:left;
+    padding-left:10px;
+    padding-top:10px;
+
+  }
+  .donate-payment{
+    margin:10px;
+    height:445px;
+    width:400px;
+    border:10px solid black;
+   
+    
+  }
+  .donate-payment-container{
+    display:flex;
+    justify-content:space-around
+  
+  }
+  .donate-top{
+    width:100%;
+    height:50px;
+    background-color: rgb(8, 89, 202);
+    color:white;
+  }
+  .donate-text{
+    padding:13px;
+  }
+  .donate-money-container{
+    display:flex;
+    gap:10px;
+    justify-content: space-around;
+
+  }
+
+  .donate-show{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    padding-top:70px;
+  }
+  .onclick-show{
+    text-align:center; 
+  }
+  .donate-payy{
+    height:40px;
+    width:100px;
+    margin:10px; 
+  }
+.confirm{
+  margin-top:100px;
+height:50px;
+width:100%;
+background-color:red;
+color:white;
+}
+
+
+  

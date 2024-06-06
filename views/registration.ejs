@@ -1,0 +1,89 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login-registration.css" />
+  </head>
+  <body>
+      <section class="log-reg">
+      <div class="container">
+        <div class="form-container">
+          <span class="R-title">Registration </span>
+          <form id="registrationForm"action="/register" method="POST">
+            <div class="input-field user">
+              <img
+                class="envelope icon"
+                src="icons/user.svg"
+                alt=""
+                width="20" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name" />
+            </div>
+            <div class="input-field email">
+              <img
+                class="envelope icon"
+                src="icons/envelope.svg"
+                alt=""
+                width="20" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email" />
+            </div>
+            <div class="input-field password">
+              <img
+                class="lock icon"
+                src="icons/lock.svg"
+                alt=""
+                width="20" />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password" />
+            </div>
+            <div class="input-field password">
+              <img
+                class="lock icon"
+                src="icons/lock.svg"
+                alt=""
+                width="20" />
+              <input
+                type="password"
+                name="ConfirmPassword"
+                id="ConfirmPassword"
+                placeholder="Confirm a password" />
+              <img
+                class="crossed-eye"
+                src="icons/crossed-eye.svg"
+                alt=""
+                width="20" />
+            </div>
+            <div class="checkBox-item R-checkBox-item">
+              <div class="checkBox-content R-checkBox-content">
+                <input type="checkbox" name="terms" id="terms" />
+                <label for="terms">I accept all terms & conditions</label>
+              </div>
+            </div>
+            <div id="termsError" class="error-message"></div>
+            <button class="button" type="submit">Registration</button>
+            <div class="register-login-redirect">
+              <p>
+                Already have an account?
+                <a href="/login.html">login now</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<%- include("partials/footer.ejs") %>

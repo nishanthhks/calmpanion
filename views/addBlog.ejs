@@ -1,0 +1,29 @@
+<%- include("partials/headfoot.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <link rel="stylesheet" href="headfoot.css">
+</head>
+<body>
+    <section class="add-blog-form">
+        <h2>Pen it down 🖊️</h2>
+        <form action="/view" method="POST">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+    
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic">
+    
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="4"></textarea>
+    
+            <button type="submit">Submit Blog</button>
+        </form>
+    </section>
+    
+    
+</body>
+</html>

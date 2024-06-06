@@ -1,0 +1,118 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+  <div class="background-img">
+    <div class="donate-desc">
+        <p class="donateText">
+        <h1 class="donate-heading">DONATE</h1>
+        <h4 class="donate-sub-heading"> Make a difference.</h4>
+        </p>
+        <button class="donate-button" onclick="scrollToDiv()">Donate Now!</button>
+    </div>
+
+</div>
+<br>
+<p class="donate-cause-title">
+  <br>
+    OUR CAUSES
+</p>
+<br>
+<div class="donate-cause-container">
+    <div class="donate-cause-card-one">
+        <p class="donate-cause-card-title">Mental Health Awareness</p>
+        <p class="donate-cause-card-desc">Donations support the development and dissemination of educational materials,
+            workshops, seminars, and campaigns aimed at promoting mental health literacy and understanding.</p>
+
+    </div>
+    <div class="donate-cause-card-two">
+        <p class="donate-cause-card-title"> Services for people in Crisis</p>
+        <p class="donate-cause-card-desc">Donations support the development and dissemination of educational materials,
+            workshops, seminars, and campaigns aimed at promoting mental health literacy and understanding.</p>
+    </div>
+    <div class="donate-cause-card-three">
+        <p class="donate-cause-card-title">Access to Mental Health Care </p>
+        <p class="donate-cause-card-desc">
+        <p class="donate-cause-card-desc">Donations support the development and dissemination of educational materials,
+            workshops, seminars, and campaigns aimed at promoting mental health literacy and understanding.</p>
+        </p>
+    </div>
+    <br>
+</div>
+<br>
+<div class="donate-payment-container">
+    <div class="donate-payment">
+        <div class="donate-top">
+            <p class="donate-text">CHOOSE A MONTHLY PAYMENT!</p>
+        </div>
+        <div class="donate-money-container one">
+            <button class="donate-payy paymentone" id="nit">₹200</button>
+            <button class="donate-payy paymenttwo " id="nit">₹300</button>
+            <button class="donate-payy paymentthree" id="nit">₹400</button>
+           
+        </div>
+        <div class="donate-money-container two">
+            <button class="donate-payy paymentfour" id="nit">₹500</button>
+            <button class="donate-payy paymentfive" id="nit">₹1000</button>
+            <button class="donate-payy paymentsix" id="nit">₹2000</button>
+        </div>
+        <p class="donate-show">
+         
+            Your Gift Amount:
+        </p>
+        <p class="onclick-show" id="gift">
+            
+        </p>
+       <button class="confirm">CONFIRNM PAYMENT</button>
+    </div>
+</div>
+</body>
+<script>
+  
+
+
+var btn1=document.querySelector(".paymentone");
+btn1.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹200";
+});
+
+var btn2=document.querySelector(".paymenttwo");
+btn2.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹300";
+});
+
+var btn3=document.querySelector(".paymentthree");
+btn3.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹400";
+});
+
+var btn4=document.querySelector(".paymentfour");
+btn4.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹500";
+});
+
+var btn5=document.querySelector(".paymentfive");
+btn5.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹1000";
+});
+
+var btn6=document.querySelector(".paymentsix");
+btn6.addEventListener("click",()=>{
+ document.querySelector("#gift").innerHTML="₹2000";
+});
+
+
+var btn7=document.querySelector(".confirm");
+btn7.addEventListener("click",()=>{
+alert("PAYMENT SUCCESSFUL");
+});
+</script>
+</html>
+
+<%- include("partials/footer.ejs") %>
